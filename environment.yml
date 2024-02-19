@@ -1,0 +1,26 @@
+# Micromamba environment file
+# https://marketplace.visualstudio.com/items?itemName=corker.vscode-micromamba
+
+# Robostack style ROS Humble setup
+# For more details see: https://robostack.github.io/GettingStarted.html
+
+name: ros_humble
+
+channels:
+  - robostack-staging
+  - conda-forge
+  # We want to have a reproducible setup, so we don't want default channels,
+  # which may be different for different users. All required channels should
+  # be listed explicitly here.
+  - nodefaults
+
+dependencies:
+  - ros-humble-desktop
+
+  # Local development deps:
+  - compilers
+  - cmake
+  - pkg-config
+  - make
+  - ninja
+  - colcon-common-extensions
